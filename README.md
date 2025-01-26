@@ -2,7 +2,10 @@
 ## Data-Extraction-VBA 
 This project automates the process of gathering and processing report files using Excel VBA. It scans a folder and its subfolders for specific report files, extracts data from them, and updates an Excel workbook accordingly.
 
-![Project Image](Documentation/ERD.png)
+
+| <img src="Documentation/media/VBA.jpg" alt="Project Image" width="200" style="float: right; margin-left: 15px; margin-bottom: 15px;" /> |
+|:--:|
+
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -11,6 +14,7 @@ This project automates the process of gathering and processing report files usin
 - [How to Use](#how-to-use)
 - [How to Contribute](#how-to-contribute)
 - [License](#license)
+
 
 ## Project Overview
 
