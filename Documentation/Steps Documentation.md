@@ -1,123 +1,58 @@
-| \[14/12/2024\] |
+| \[03/02/2022\] |
 |----------------|
 
-| Project Name |
+| Data-Extraction-VBA |
 |--------------------------------|
 
-# Team 
-> Mahmoud Mohamed Abdel Aziz
-> (if other contribute)
-
-## Change the below part with new data
-> ![](media/image1.jpg)
-
-# Data Cleaning and Preprocessing
-
-Data Preprocessing: Clean and preprocess the data using Power BI
-
-**Deliverables:** Cleaned dataset ready for analysis.
-
-## **Steps** 
-
-The data consists of 4 Tables of data and 1 table as a data dictionary
-
-**Downtime factors Sheet**
-
-> * Loaded sheet and selected Downtime factors Sheet
-> * Promoted header and changed Type
-> * Confirmed by data view NO Errors and NO Empty data
-
-**Line productivity Sheet**
-
-> * Loaded sheet and selected Downtime factors Sheet
-> * Promoted header and changed Type
-> * Confirmed by data view NO Errors and NO Empty data
-> * KEEP ONLY Required Columns
-> * Calculated Actual Period in minutes to:
->    * get this values and use it for further calculations
->    * No negative values confirm no errors in start and end times Entry
-
-**Line downtime Sheet**
-
-> * Loaded sheet and selected Line factors Sheet
-> * Promoted header but found extra undesired row.
-> * removed 1 top row first and Promoted header
-> * Confirmed by data view NO Errors and NO Empty data in Batch but all
-  other data have empty values
-> * Empty values are due to each factor data is displayed in separate
-  column
-> * Unpivot 12 factors in two column factor and Downtime in minutes
-> * Confirmed by data view NO Errors and NO Empty data in all remaining
-  columns
-
-**Products Sheet**
+ Mahmoud Mohamed Abdel Aziz
 
 
-> * Loaded sheet and selected Products Sheet
-> * Promoted header and changed Type
-> * Confirmed by data view NO Errors and NO Empty data
-> * To use Size in calculations, it is better to use it in single unit.
-  SO, we will change all into ml and keep necessary columns only
+## Overview
 
-**ERD (Entity Relationship Diagram)**
-> ![](media/image2.png)
+This project is designed to automate the collection and processing of report files using Excel VBA. The main goals of the project are to:
+- Scan a directory for new files.
+- Extract data from the files and update a master workbook.
+- Handle potential errors in file retrieval and processing.
 
-# Analysis Questions Phase
+## Code Breakdown
 
-Determine Data Analysis Questions: Determine all possible analysis
-questions that can be deducted from the given dataset and would be of
-interest to the organization's decision makers.
+### `Get_rest_file`:
+This macro scans a folder and its subfolders to locate report files based on the pattern specified in the workbook. It stores the file paths of the new reports in an array (`NewFiles`) for later processing.
 
-**Deliverables:** Set of analysis questions that can be answered via the
-dataset.
+**Key features**:
+- Scans subfolders recursively.
+- Uses patterns from the `Data` sheet to match file and folder names.
+- Avoids duplicates by checking if a file is already added.
 
-## **Steps** 
+### `Update_WB_link`:
+This macro updates the workbook with data from the new files that were found by the `Get_rest_file` macro. It updates links, file paths, and processes data into the workbook's "Data" sheet.
 
-**All Available Data**
+**Key features**:
+- Updates file paths and links in the workbook.
+- Performs a Find and Replace operation to clean up data (e.g., replace "N/A" with an empty string).
+- Saves the workbook and logs the time taken for the operation.
 
-> * Downtime \[Factor -- Operator Error (YES/NO)\]
-> * Time \[ Date -- Start -- End -- Actual Period \]
-> * Unique \[ Batch -- Product -- Operator - Flavor\]
+## How to Use
 
+### Setup
+1. Open the workbook in Excel and enable macros.
+2. Enter the folder path in cell `T2` in the "Data" sheet.
+3. Specify folder name and file name patterns in cells `T3` and `T4`.
 
-**To check Downtime (Sum, Average, Max, Min, Mode)** **vs:**
-> * Factor
-> * Operator Error (YES/NO)
-> * Operator (Name)
-> * Batch
-> * Product
-> * Flavor
+### Running the Macros
+1. Press `Alt + F8` to open the "Macro" dialog.
+2. Select the `Update_WB_link` macro and click "Run."
+3. The script will process all the new report files, update the workbook, and display the results.
 
+## Error Handling
 
-# Dashboard Phase
+The code includes error handling to ensure that if there are issues with the file paths or if any unexpected errors occur, they are properly addressed:
+- If the folder path is incorrect, a message box will appear to notify the user.
+- The program ensures that no duplicate files are added to the "Data" sheet by checking file paths.
 
-Build Dashboard: Build a Power BI dashboard that visualize the answers
-to the asked questions.
+## Performance
+The program is designed to handle a large number of files and folders efficiently. It uses arrays to store file paths temporarily, which allows for quick processing.
 
-**Deliverables:** Power BI dashboard.
+## Conclusion
 
-## **Steps** 
-
-> * Every one to record every step he makes
-
-
-# Final Presentation
-
-Prepare a report and presentation summarizing the project work,
-including data analysis, model development, and deployment.
-
-**Deliverables:** Final report and presentation.
-
-## **Steps** 
-
-> * Every one to record every step he makes
-
-
-# Discussion 
-
-\[Summarize the discussion for each issue, state the outcome, and assign
-any action items.\]
-
-# Summary 
-
-\[Summarize the status of each area/department.\]
+This VBA project is a powerful automation tool for handling report files and updating workbooks. It is customizable, allowing you to define the folder and file name patterns for each use case. The error handling ensures a smooth experience even when working with large datasets.
