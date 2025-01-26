@@ -4,10 +4,18 @@
 | Data-Extraction-VBA |
 |--------------------------------|
 
- Mahmoud Mohamed Abdel Aziz
- 
-| <img src="media/VBA-Extract.jpg" alt="Project Image" width="600" style="float: right; margin-left: 15px; margin-bottom: 15px;" /> |
-|:--:|
+
+<table border="1" style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td>
+      <img src="media/VBA.jpg" alt="Project Image" width="200" style="float: right; margin-left: 15px; margin-bottom: 15px;" />
+    </td>
+    <td>
+      <img src="media/VBA-Extract.jpg" alt="Project Image" width="600" style="float: right; margin-left: 15px; margin-bottom: 15px;" />
+      <div style="text-align: center; margin-top: 10px; font-weight: bold;"><em> Mahmoud Yusuf</em></div>
+    </td>
+  </tr>
+</table>
 
 ## Overview
 
