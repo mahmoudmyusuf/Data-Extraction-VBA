@@ -9,9 +9,11 @@ This project automates the process of gathering and processing report files usin
     </td>
     <td>
       <img src="Documentation/media/VBA-Extract.jpg" alt="Project Image" width="600" style="float: right; margin-left: 15px; margin-bottom: 15px;" />
+      <div style="text-align: center; margin-top: 10px; font-weight: bold;"><em> Mahmoud Yusuf</em></div>
     </td>
   </tr>
 </table>
+
 
 ## Table of Contents
 - [Project Overview](#project-overview)
