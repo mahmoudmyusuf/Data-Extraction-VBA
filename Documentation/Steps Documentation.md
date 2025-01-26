@@ -34,10 +34,22 @@ This macro updates the workbook with data from the new files that were found by 
 
 ## How to Use
 
-### Setup
-1. Open the workbook in Excel and enable macros.
-2. Enter the folder path in cell `T2` in the "Data" sheet.
-3. Specify folder name and file name patterns in cells `T3` and `T4`.
+
+## Steps
+
+1. **Set Up the Workbook:**
+   - Open the workbook in Excel and enable macros.
+   - Ensure you have a source file from which data will be pulled. 
+   - Copy and paste the links to all the required data from the source file into the destination file. Once done, the code will automate the process of updating the links.
+   - Enter the folder path in cell `T2` in the "Data" sheet.
+   - Specify folder name and file name patterns in cells `T3` and `T4`.
+   
+2. **Confirm a Single Link:**
+   - In Excel, navigate to **File > Edit Links to Files** to check the linked files.
+   - Confirm that **only one link** exists in the list. If there are multiple links, the code will only update the first link in the list.
+   
+3. **Run the VBA Code:**
+   - When you run the code, it will automatically process only new or edited files, updating the links to match the latest source data file. It avoids reprocessing files that have already been handled.
 
 ### Running the Macros
 1. Press `Alt + F8` to open the "Macro" dialog.
@@ -52,6 +64,11 @@ The code includes error handling to ensure that if there are issues with the fil
 
 ## Performance
 The program is designed to handle a large number of files and folders efficiently. It uses arrays to store file paths temporarily, which allows for quick processing.
+
+**Key Performance Features**:
+- It processes only new or edited files, avoiding the repetition of previously processed files. This is done by checking each file's path and timestamp, ensuring that only new files are added to the workbook.
+- It handles data from all sheets in the source files as it relies on updating links, rather than updating each cell individually. This approach ensures that all data is synchronized efficiently without manually processing each worksheet.
+
 
 ## Conclusion
 
