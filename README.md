@@ -24,9 +24,30 @@ This project is designed to automate the process of loading report files from va
 - Updates external file links in the workbook.
 - Automatic error handling for missing files and data.
 - Updates the workbook’s "Data" sheet with the latest file paths.
+  
+## Project Structure:
+- **[VBA-Scripts Folder](./VBA-Scripts/)**: Contains all VBA modules and macros. This includes code for data import, processing, and reports.
+- **[Datasets Folder](./Datasets/)**: Includes Excel files and data needed for the VBA macros (if applicable).
+- **[Reports Folder](./Reports/)**: Generated reports or exported files after VBA processing.
+- **[Documentation Folder](./Documentation/)**: Detailed documentation, including project setup, steps, and usage.
 
 ## How to Use
 
 1. **Clone the repository** to your local machine:
    ```bash
    git clone https://github.com/yourusername/Excel-VBA-Report-Project.git
+
+
+## How to Contribute:
+If you'd like to contribute:
+1. Fork the repository.
+2. Make your changes to the VBA scripts.
+3. Create a pull request with a clear description of your changes.
+
+Please ensure that any contributions follow the project's coding style and include comments where necessary.
+
+## **[Final Documentation](./Documentation.md)**:
+For detailed steps, analysis, and methodology, please refer to the [Final Documentation](./Documentation.md) file.
+
+## License:
+This project is a personal project and is free to use for personal, educational, and non-commercial purposes.
