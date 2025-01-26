@@ -5,7 +5,9 @@
 |--------------------------------|
 
  Mahmoud Mohamed Abdel Aziz
-
+ 
+| <img src="media/VBA-Extract.jpg" alt="Project Image" width="600" style="float: right; margin-left: 15px; margin-bottom: 15px;" /> |
+|:--:|
 
 ## Overview
 
